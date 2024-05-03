@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pokemon"
+version = "0.1.0"
+description = ""
+authors = ["Rhanyele Marinho <rhany.marinho@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "==3.12.2"
+streamlit = "^1.33.0"
+pydantic = "^2.7.1"
+pandas = "^2.2.2"
+logging = "^0.4.9.6"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
