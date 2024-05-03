@@ -42,4 +42,4 @@ def carregar_pokedex():
 if __name__ == '__main__':
     logging.info('########## INICIO DA EXECUCAO ##########')
     carregar_pokedex()
-    logging.info('########## FIM DA EXECUCAO ##########'
+    logging.info('########## FIM DA EXECUCAO ##########')
