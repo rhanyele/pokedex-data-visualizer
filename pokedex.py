@@ -4,6 +4,8 @@ import pandas as pd
 from api.imagem import baixar_imagem
 from api.pokemon import dataframe_pokemon
 
+logging.basicConfig(level=logging.INFO, filename=".log", filemode='w', format="%(asctime)s - %(levelname)s - %(message)s", encoding='utf-8')
+
 def validar_arquivo_e_pasta():
     caminho_pasta = "data"
     if not os.path.exists(caminho_pasta):
@@ -17,7 +19,6 @@ def validar_arquivo_e_pasta():
     return caminho_arquivo
 
 def carregar_pokedex():
-    logging.basicConfig(level=logging.INFO, filename=".log", filemode='w', format="%(asctime)s - %(levelname)s - %(message)s", encoding='utf-8')
     caminho_arquivo = validar_arquivo_e_pasta()
 
     try:
@@ -37,3 +38,8 @@ def carregar_pokedex():
                 logging.info(f"O Pokémon com ID {pokemon} já existe na Pokédex.")
     except Exception as e:
         logging.error(f"Erro ao carregar a Pokédex: {e}")
+
+if __name__ == '__main__':
+    logging.info('########## INICIO DA EXECUCAO ##########')
+    carregar_pokedex()
+    logging.info('########## FIM DA EXECUCAO ##########'
